@@ -3,7 +3,7 @@
 module.exports = function(str, pluriel, nb){
 
     // If pluriel is not initialized
-    if(typeof pluriel === number){
+    if(typeof pluriel === 'number'){
         nb = pluriel;
 
         var last_letter = str[str.length-1],    // Last letter of str
