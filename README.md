@@ -1,6 +1,10 @@
 # Pluriel [![Build Status](https://travis-ci.org/bazzooka/pluriel.svg?branch=master)](https://travis-ci.org/bazzooka/pluriel)
 
-> Ajoute un pluriel simple au nom singulier
+> Ajoute un pluriel simple au nom singulier. Prends en compte les exceptions de type :
+  - pluriel simple des noms
+  - exception des noms finissant en -ou
+  - exception des noms finissant en -s -z -x
+  - exception des noms finissant en -eau -au -eu
 
 ## Installation
 ```
