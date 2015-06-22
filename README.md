@@ -1,4 +1,4 @@
-# Pluriel
+# Pluriel [![Build Status](https://travis-ci.org/bazzooka/pluriel.svg?branch=master)](https://travis-ci.org/bazzooka/pluriel)
 
 > Ajoute un pluriel simple au nom singulier
 
