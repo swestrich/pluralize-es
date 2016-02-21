@@ -10,6 +10,8 @@ test(function (t) {
     t.assert(pluriel('chou', 5) === 'choux');
     t.assert(pluriel('poireau', 5) === 'poireaux');
     t.assert(pluriel('ananas', 5) === 'ananas');
+    t.assert(pluriel('cheval', 5) === 'chevaux');
+    t.assert(pluriel('spiral', 5) === 'spiraux');
     t.assert(pluriel('hero', 'heroes', 5) === 'heroes');
     t.end();
 });
