@@ -12,6 +12,7 @@ test(function (t) {
     t.assert(pluriel('ananas', 5) === 'ananas');
     t.assert(pluriel('cheval', 5) === 'chevaux');
     t.assert(pluriel('spiral', 5) === 'spiraux');
+    t.assert(pluriel('bail', 5) === 'baux');
     t.assert(pluriel('hero', 'heroes', 5) === 'heroes');
     t.end();
 });
