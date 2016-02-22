@@ -1,18 +1,18 @@
 'use strict';
 
 var test = require('ava'),
-    pluriel = require('./');
+    pluralize = require('./');
 
 
 test(function (t) {
-    //t.assert(pluriel('test', 0) === 'test');
-    t.assert(pluriel('test', 5) === 'tests');
-    t.assert(pluriel('chou', 5) === 'choux');
-    t.assert(pluriel('poireau', 5) === 'poireaux');
-    t.assert(pluriel('ananas', 5) === 'ananas');
-    t.assert(pluriel('cheval', 5) === 'chevaux');
-    t.assert(pluriel('spiral', 5) === 'spiraux');
-    t.assert(pluriel('bail', 5) === 'baux');
-    t.assert(pluriel('hero', 'heroes', 5) === 'heroes');
+    t.assert(pluralize('avión') === 'aviones');
+    t.assert(pluralize('televisión') === 'televisiones');
+    t.assert(pluralize('lápiz') === 'lápices');
+    t.assert(pluralize('pluma') === 'plumas');
+    t.assert(pluralize('universidad') === 'universidades');
+    t.assert(pluralize('café') === 'cafés');
+    t.assert(pluralize('bongó') === 'bongoes');
+    t.assert(pluralize('zigzag') === 'zigzagues');
+    t.assert(pluralize('frac') === 'fraques');
     t.end();
 });
