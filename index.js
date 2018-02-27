@@ -26,17 +26,8 @@ module.exports = function(str) {
       case 'cafés':
         plural = 'cafeses';
         break;
-      case 'acortamientos':
-        plural = 'acortamiento';
-        break;
-      case 'abreviaturas':
-        plural = 'abreviatura';
-        break;
-      case 'siglas':
-        plural = 'sigla';
-        break;
-      case 'símbolos':
-        plural = 'símbolo';
+      case 'país':
+        plural = 'paises'
         break;
       default:
         //normally though it doesn't change
