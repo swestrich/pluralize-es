@@ -4,7 +4,13 @@
 
 ## Installation
 ```
-$ npm install --save pluralize-es
+$ npm install --save LuisReinoso/pluralize-es
+```
+
+> or
+
+```
+$ npm install --save pluralize-es // for original package
 ```
 
 ## Usage
