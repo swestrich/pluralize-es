@@ -14,6 +14,7 @@ test(function (t) {
     t.assert(pluralize('bongó') === 'bongoes');
     t.assert(pluralize('zigzag') === 'zigzagues');
     t.assert(pluralize('frac') === 'fraques');
-    t.assert(pluralize('país') === 'paises');
+    t.assert(pluralize('país') === 'países');
+    t.assert(pluralize('País') === 'Países');
     t.end();
 });

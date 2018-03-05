@@ -27,7 +27,10 @@ module.exports = function(str) {
         plural = 'cafeses';
         break;
       case 'país':
-        plural = 'paises'
+        plural = 'países';
+        break;
+      case 'País':
+        plural = 'Países';
         break;
       default:
         //normally though it doesn't change
