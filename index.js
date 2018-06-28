@@ -49,6 +49,11 @@ module.exports = function(str) {
     //easy, just add s
     plural = str + 's';
   }
+  else if (last_letter === 's') {
+    //if the word ends with S but is not aguda
+    //(accented in the last syllabe)
+    plural = str;
+  }
   else {
     plural = str + 'es';
   }

@@ -17,5 +17,6 @@ test(function (t) {
     t.assert(pluralize('bastón') === 'bastones');
     t.assert(pluralize('cajón') === 'cajones');
     t.assert(pluralize('país') === 'paises');
+    t.assert(pluralize('lunes') === 'lunes');
     t.end();
 });
