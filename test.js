@@ -11,8 +11,11 @@ test(function (t) {
     t.assert(pluralize('pluma') === 'plumas');
     t.assert(pluralize('universidad') === 'universidades');
     t.assert(pluralize('café') === 'cafés');
-    t.assert(pluralize('bongó') === 'bongoes');
+    t.assert(pluralize('bongó') === 'bongós');
     t.assert(pluralize('zigzag') === 'zigzagues');
     t.assert(pluralize('frac') === 'fraques');
+    t.assert(pluralize('bastón') === 'bastones');
+    t.assert(pluralize('cajón') === 'cajones');
+    t.assert(pluralize('país') === 'paises');
     t.end();
 });
