@@ -1,11 +1,20 @@
 'use strict';
 
+var removeAccents = require('remove-accents')
+var vowels = 'aeiou'.split('');
+
+function isVowel(char) {
+  var result = char.length === 1 &&
+      vowels.indexOf(removeAccents(char)) > -1;
+  return result;
+}
+
 module.exports = function(str) {
   //info can be found here:
   //http://lema.rae.es/dpd/?key=plural&lema=plural
   //http://www.studyspanish.com/lessons/plnoun.htm
   //http://www.spanishdict.com/topics/show/3
-  
+
   //some things are conflicting though so there might be some issues.
 
   var plural;
@@ -18,30 +27,9 @@ module.exports = function(str) {
     plural = str;
   }
 
-  if (last_letter === 's') {
-    switch (str) {
-      case 'pies':
-        plural = 'pieses';
-        break;
-      case 'cafés':
-        plural = 'cafeses';
-        break;
-      case 'acortamientos':
-        plural = 'acortamiento';
-        break;
-      case 'abreviaturas':
-        plural = 'abreviatura';
-        break;
-      case 'siglas':
-        plural = 'sigla';
-        break;
-      case 'símbolos':
-        plural = 'símbolo';
-        break;
-      default:
-        //normally though it doesn't change
-        plural = str;
-    }
+  if (last_2_letters.match(/[áéíóú](n|s)$/)) {
+    var radical = removeAccents(str);
+    plural = radical + 'es';
   }
   else if (last_letter === 'z') {
     //drop the z and add ces
@@ -57,32 +45,18 @@ module.exports = function(str) {
     //add an extra u
     plural = str + 'ues';
   }
-  else if (last_letter === 'a' || last_letter === 'e' || last_letter === 'é' || last_letter === 'i' || last_letter === 'o' || last_letter === 'u') {
+  else if (isVowel(last_letter)) {
     //easy, just add s
     plural = str + 's';
-
   }
-  else if (last_letter === 'á') {
-    var radical = str.substring(0, str.length - 1);
-    plural = radical + 'aes';
-
+  else if (last_letter === 's') {
+    //if the word ends with S but is not aguda
+    //(accented in the last syllabe)
+    plural = str;
   }
-  else if (last_letter === 'ó') {
-    var radical = str.substring(0, str.length - 1);
-    plural = radical + 'oes';
-
-  }
-  else if (last_3_letters === 'ión') {
-    var radical = str.substring(0, str.length - 3);
-    plural = radical + 'iones';
-  }
-  else if (last_2_letters === 'ín') {
-    var radical = str.substring(0, str.length - 2);
-    plural = radical + 'ines';
-  }
-
   else {
     plural = str + 'es';
   }
+
   return plural;
 };

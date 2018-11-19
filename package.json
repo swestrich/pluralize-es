@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "ava": "0.0.4"
+  },
+  "dependencies": {
+    "remove-accents": "^0.4.2"
   }
 }
