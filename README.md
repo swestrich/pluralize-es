@@ -25,3 +25,9 @@ plural('universidad');
 Type: `string`
 
 The noun to make plural.
+
+### plural.singularize(str)
+
+Type: `string`
+
+The noun to make singular.
