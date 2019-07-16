@@ -86,3 +86,44 @@ module.exports = function(str) {
   }
   return plural;
 };
+
+module.exports.singularize = function(str) {
+  var last_letter = str[str.length - 1], // Last letter of str
+    last_2_letters = str.slice(-2), // Last 2 letters of str
+    last_3_letters = str.slice(-3), // Last 2 letters of str
+    last_4_letters = str.slice(-4); // Last 4 letters of str
+
+  if (last_letter !== 's') // it's not a plural word, just return it
+    return str;
+
+  if (last_4_letters === 'unes')
+    return str;
+
+  if (last_4_letters === 'ones')
+    return str.slice(0, -4) + 'ón';
+
+  if (last_4_letters === 'ques')
+    return str.slice(0, -4) + 'c';
+
+  if (last_4_letters === 'ises')
+    return str.slice(0, -4) + 'ís';
+
+  if (last_4_letters === 'uses')
+    return str.slice(0, -4) + 'ús';
+
+  if (last_3_letters === 'oes')
+    return str.slice(0, -3) + 'ó'
+
+  if (last_3_letters === 'ces')
+    return str.slice(0, -3) + 'z'
+
+  if (last_3_letters === 'ues')
+    return str.slice(0, -3)
+
+  if (last_2_letters === 'es')
+    return str.slice(0, -2);
+
+  if (last_letter === 's')
+    return str.slice(0, -1)
+
+}
